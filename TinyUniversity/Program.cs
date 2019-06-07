@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using TinyUniversity.Models;
 using Microsoft.Extensions.DependencyInjection;
-
+using TinyUniversity.Data;
 
 namespace TinyUniversity
 {
@@ -26,7 +26,8 @@ namespace TinyUniversity
                 try
                 {
                     var context = services.GetRequiredService<SchoolContext>();
-                    context.Database.EnsureCreated();
+                    //context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
