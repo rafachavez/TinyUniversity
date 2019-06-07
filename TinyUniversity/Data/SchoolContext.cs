@@ -14,5 +14,8 @@ namespace TinyUniversity.Models
         }
 
         public DbSet<TinyUniversity.Models.Student> Student { get; set; }
+        public DbSet<TinyUniversity.Models.Course> Course { get; set; }
+        public DbSet<TinyUniversity.Models.Enrollment> Enrollment { get; set; }
+
     }
 }
